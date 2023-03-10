@@ -49,6 +49,9 @@ std::unique_ptr<VW::workspace> initialize_internal(
     model = &local_model;
   }
 
+  // Screening exercise 1: print "Hello world" when vw starts
+  *(all->trace_message) << "Hello world" << std::endl;
+
   std::vector<std::string> dictionary_namespaces;
   try
   {
